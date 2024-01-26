@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emp Management Sys</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="create-section">
+        <button id="model-toggle-btn" class="btn">Create Employee</button>
+        <div class="model hide-model" id="model">
+            <span class="material-icons close-icon" id="close-icon">close</span>
+            <div class="model-body">
+                <h2>Enter Employee Details</h2>
+                <form id="form">
+                    <input type="text" placeholder="Name of Employee" name="name" required />
+                    <input type="email" placeholder="Email of Employee" name="email" required />
+                    <select name="role">
+                        <option value="SDE">SDE</option>
+                        <option value="Testing">Testing</option>
+                        <option value="Data Analyst">Data Analyst</option>
+                        <option value="Product">Product</option>
+                    </select>
+                    <input type="date" placeholder="Date of Join" name="doj" required />
+                    <div>
+                        <div>
+                            <input type="radio" name="gender" value="male" id="male" required/>
+                            <label for="male">Male</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="gender" value="female" id="female" required/>
+                            <label for="female">Female</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="gender" value="other" id="other" required/>
+                            <label for="other">Other</label>
+                        </div>
+                    </div>
+                    <button id="add-employee-btn" class="btn">Add Employee</button>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <table class="employee-list" id="employee-list">
+        <thead>
+            <tr>
+                <th>Emp ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Date Of Joining</th>
+                <th>Gender</th>
+                <th>Options</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div class="model hide-model" id="edit-model">
+        <div class="model-body update-model-body">
+            <h2>Edit Employee Details</h2>
+            <form id="edit-form">
+                <input type="text" name="name" required />
+                <input type="email" name="email" required />
+                <select name="role">
+                    <option value="SDE">SDE</option>
+                    <option value="Testing">Testing</option>
+                    <option value="Data Analyst">Data Analyst</option>
+                    <option value="Product">Product</option>
+                </select>
+                <input type="date" placeholder="Date of Join" name="doj" required />
+                <div>
+                    <div>
+                        <input type="radio" name="gender" value="male" id="male1" required/>
+                        <label for="male1">Male</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="gender" value="female" id="female1" required/>
+                        <label for="female1">Female</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="gender" value="other" id="other1" required/>
+                        <label for="other1">Other</label>
+                    </div>
+                </div>
+                <button id="edit-employee-btn" class="btn">Edit Employee</button>
+                <button type="button" id="close-btn" class="btn close-btn">Close</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
